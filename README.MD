@@ -1,5 +1,28 @@
 # python-translate-client
 
-$ chmod +x translate.py
-$ ./translate.py es Привет, мир!
-Hola, el mundo!
+Простой клиент для обращения к API Яндекс.Перевод.
+
+Использованы:
+
+- python 3.4.3
+- requests 2.11.1
+
+Для получения доступа к API необходим API_KEY,
+который можно бесплатно получить [здесь](https://tech.yandex.ru/keys/get/?service=trnsl).
+
+Для удобства и безопасности API_KEY вынесен в секцию SECURITY конфтигурационного файла config.ini:
+
+    [SECURITY]
+    API_KEY = ключ
+
+Для запуска из командной строки нужно сделать файл исполняемым:
+
+    $ chmod +x translate.py
+
+В качестве аргументов передаются язык, на который нужно перевести текст, затем текст:
+
+    $ ./translate.py es Привет, мир!
+
+Результат:
+
+    Hola, el mundo!
